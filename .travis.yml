@@ -1,3 +1,4 @@
 language: objective-c
 xcode_workspace: Panda.xcworkspace
 xcode_scheme: Panda
+xcode_sdk: iphonesimulator
