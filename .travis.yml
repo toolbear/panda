@@ -1,4 +1,3 @@
 language: objective-c
 xcode_workspace: Panda.xcworkspace
 xcode_scheme: Panda-AdHoc
-xcode_sdk: iphonesimulator
