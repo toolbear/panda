@@ -1,3 +1,4 @@
 #include "../Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"
 
 BUNDLE_ID = dev.toolbear.panda.ios.adhoc
+DISPLAY_NAME_DECORATOR = 🐣

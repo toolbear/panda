@@ -1,3 +1,4 @@
 #include "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"
 
 BUNDLE_ID = dev.toolbear.panda.ios.debug
+DISPLAY_NAME_DECORATOR = 🔧
