@@ -30,11 +30,13 @@
 
 /* Begin PBXFileReference section */
 		0E360BAA69FD249D3971EEB3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA48F2862F0F1E0B5CB06F8 /* Pods-PandaTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		2A79DE17BF2B98EF2BF4CA8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AAA5D011C4061EDE1F93585 /* Pods-PandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3097CCF8C38973B38AF1C4C1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9463273E9FD2949E3FFED75B /* Pods-PandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C965EB17056D605412054362 /* libPods-PandaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PandaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC68CDA3A874020B6DF4A87C /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		FF3B756D1A7CDDBD0016900B /* Panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3B75711A7CDDBD0016900B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF3B75721A7CDDBD0016900B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 				3097CCF8C38973B38AF1C4C1 /* Pods.release.xcconfig */,
 				2AAA5D011C4061EDE1F93585 /* Pods-PandaTests.debug.xcconfig */,
 				9463273E9FD2949E3FFED75B /* Pods-PandaTests.release.xcconfig */,
+				EC68CDA3A874020B6DF4A87C /* Pods.adhoc.xcconfig */,
+				1BA48F2862F0F1E0B5CB06F8 /* Pods-PandaTests.adhoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -508,6 +512,73 @@
 			};
 			name = Release;
 		};
+		FFB9076C1A7F2FEB0090C15D /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_ID = dev.toolbear.panda.ios.v1.adhoc;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DISPLAY_NAME_DECORATOR = "🐣";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		FFB9076D1A7F2FEB0090C15D /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC68CDA3A874020B6DF4A87C /* Pods.adhoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Panda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AdHoc;
+		};
+		FFB9076E1A7F2FEB0090C15D /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BA48F2862F0F1E0B5CB06F8 /* Pods-PandaTests.adhoc.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PandaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panda.app/Panda";
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -516,6 +587,7 @@
 			buildConfigurations = (
 				FF3B758E1A7CDDBD0016900B /* Debug */,
 				FF3B758F1A7CDDBD0016900B /* Release */,
+				FFB9076C1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -525,6 +597,7 @@
 			buildConfigurations = (
 				FF3B75911A7CDDBD0016900B /* Debug */,
 				FF3B75921A7CDDBD0016900B /* Release */,
+				FFB9076D1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -534,6 +607,7 @@
 			buildConfigurations = (
 				FF3B75941A7CDDBD0016900B /* Debug */,
 				FF3B75951A7CDDBD0016900B /* Release */,
+				FFB9076E1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
