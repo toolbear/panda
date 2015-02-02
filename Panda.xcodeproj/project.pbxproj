@@ -33,8 +33,8 @@
 		1BA48F2862F0F1E0B5CB06F8 /* Pods-PandaTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		2A79DE17BF2B98EF2BF4CA8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2AAA5D011C4061EDE1F93585 /* Pods-PandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3097CCF8C38973B38AF1C4C1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9463273E9FD2949E3FFED75B /* Pods-PandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.release.xcconfig"; sourceTree = "<group>"; };
+		38EE82CADCD9F8D9797AAF9D /* Pods-PandaTests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTests.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.appstore.xcconfig"; sourceTree = "<group>"; };
+		8B67D28572E53FDC61778956 /* Pods.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.appstore.xcconfig; path = "Pods/Target Support Files/Pods/Pods.appstore.xcconfig"; sourceTree = "<group>"; };
 		C965EB17056D605412054362 /* libPods-PandaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PandaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC68CDA3A874020B6DF4A87C /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
 		FF3B756D1A7CDDBD0016900B /* Panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,11 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				2A79DE17BF2B98EF2BF4CA8F /* Pods.debug.xcconfig */,
-				3097CCF8C38973B38AF1C4C1 /* Pods.release.xcconfig */,
 				2AAA5D011C4061EDE1F93585 /* Pods-PandaTests.debug.xcconfig */,
-				9463273E9FD2949E3FFED75B /* Pods-PandaTests.release.xcconfig */,
 				EC68CDA3A874020B6DF4A87C /* Pods.adhoc.xcconfig */,
 				1BA48F2862F0F1E0B5CB06F8 /* Pods-PandaTests.adhoc.xcconfig */,
+				8B67D28572E53FDC61778956 /* Pods.appstore.xcconfig */,
+				38EE82CADCD9F8D9797AAF9D /* Pods-PandaTests.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 			};
 			name = Debug;
 		};
-		FF3B758F1A7CDDBD0016900B /* Release */ = {
+		FF3B758F1A7CDDBD0016900B /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -450,7 +450,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = AppStore;
 		};
 		FF3B75911A7CDDBD0016900B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -464,9 +464,9 @@
 			};
 			name = Debug;
 		};
-		FF3B75921A7CDDBD0016900B /* Release */ = {
+		FF3B75921A7CDDBD0016900B /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3097CCF8C38973B38AF1C4C1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8B67D28572E53FDC61778956 /* Pods.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -474,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
-			name = Release;
+			name = AppStore;
 		};
 		FF3B75941A7CDDBD0016900B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -496,9 +496,9 @@
 			};
 			name = Debug;
 		};
-		FF3B75951A7CDDBD0016900B /* Release */ = {
+		FF3B75951A7CDDBD0016900B /* AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9463273E9FD2949E3FFED75B /* Pods-PandaTests.release.xcconfig */;
+			baseConfigurationReference = 38EE82CADCD9F8D9797AAF9D /* Pods-PandaTests.appstore.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -510,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panda.app/Panda";
 			};
-			name = Release;
+			name = AppStore;
 		};
 		FFB9076C1A7F2FEB0090C15D /* AdHoc */ = {
 			isa = XCBuildConfiguration;
@@ -586,31 +586,31 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF3B758E1A7CDDBD0016900B /* Debug */,
-				FF3B758F1A7CDDBD0016900B /* Release */,
+				FF3B758F1A7CDDBD0016900B /* AppStore */,
 				FFB9076C1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = AppStore;
 		};
 		FF3B75901A7CDDBD0016900B /* Build configuration list for PBXNativeTarget "Panda" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF3B75911A7CDDBD0016900B /* Debug */,
-				FF3B75921A7CDDBD0016900B /* Release */,
+				FF3B75921A7CDDBD0016900B /* AppStore */,
 				FFB9076D1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = AppStore;
 		};
 		FF3B75931A7CDDBD0016900B /* Build configuration list for PBXNativeTarget "PandaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF3B75941A7CDDBD0016900B /* Debug */,
-				FF3B75951A7CDDBD0016900B /* Release */,
+				FF3B75951A7CDDBD0016900B /* AppStore */,
 				FFB9076E1A7F2FEB0090C15D /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = AppStore;
 		};
 /* End XCConfigurationList section */
 	};

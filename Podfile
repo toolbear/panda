@@ -1,6 +1,6 @@
 platform :ios, '8.0'
 
-xcodeproj 'Panda', 'AdHoc' => :release
+xcodeproj 'Panda', 'AdHoc' => :release, 'AppStore' => :release
 
 pod 'Underscore.m'
 
