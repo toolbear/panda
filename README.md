@@ -14,3 +14,9 @@
 2. Press **⌘U**; tests ✅
 
 3. Push to GitHub; enable Travis; tests ✅
+
+---
+
+[![Build Status](https://travis-ci.org/toolbear/panda.svg?branch=master)](https://travis-ci.org/toolbear/panda)
+
+---
