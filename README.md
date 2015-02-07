@@ -44,3 +44,10 @@
 * [ ] Modern Xcode defaults
   * [ ] strict warnings
   * [x] 2-space indent
+
+## License
+
+Choose your own adventure.
+
+* MIT: see [LICENSE](LICENSE)
+* Public Domain
