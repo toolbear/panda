@@ -1,4 +1,4 @@
-# 🐼 — a better way to start a new iOS project
+# 🐼 — a better way to start an iOS project
 
 1. Start from the archetype
 
