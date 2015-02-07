@@ -1,7 +1,7 @@
 # 🐼
 
 ```console
-cd panda-ios
+cd panda
 pod install
 open -a Xcode .
 ```
