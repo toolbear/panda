@@ -1,0 +1,45 @@
+#!/usr/bin/env zsh
+
+set -eu
+IFS=$'\n\t'
+
+security=/usr/bin/security
+toplevel=$(git rev-parse --show-toplevel)
+
+function unlock_keychain () {
+  printf 'Unlocking %s.keychain\n' $1
+  local keychain=$1.keychain
+  local source=${toplevel}/ci/${keychain}
+  local destination=~/Library/Keychains/${keychain}
+  if [[ -f ${source} && ! -f ${destination} ]] ; then
+    cp ${source} ${destination}
+  fi
+  if [[ -f ${destination} ]] ; then
+    ${security} unlock-keychain -p ${KEYCHAIN_PASSWORD} ${destination}
+    ${security} set-keychain-settings -lut $((60*60*24)) ${destination}
+    local -aU keychains
+    keychains+=("${(f)=$(${security} list-keychains -d user):gs/    //:Q}")
+    keychains+=(${destination})
+    ${security} list-keychains -d user -s ${(Q)keychains}
+  fi
+}
+
+# install PROFILE to Library/MobileDevice/Provisioning\ Profiles/
+#
+# PROFILE.mobileprovision must be a symbolic link pointing to a
+# file of the form UUID.mobileprovision, where UUID is the provisioning
+# profile's UUID
+function copy_provisioning_profile () {
+  printf 'Installing %s.mobileprovision\n' $1
+  local source=${toplevel}/ci/$1.mobileprovision
+  local destination
+  [[ -L ${source} && -f ${source:A} ]]
+  destination=~/Library/MobileDevice/Provisioning\ Profiles/${source:A:t}
+  if [[ ! -f ${destination} ]] ; then
+    mkdir -p ${destination:h}
+    cp ${source} ${destination}
+  fi
+}
+
+unlock_keychain ${TRAVIS_XCODE_SCHEME}
+copy_provisioning_profile ${TRAVIS_XCODE_SCHEME}
