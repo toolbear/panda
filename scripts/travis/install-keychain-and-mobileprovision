@@ -24,12 +24,18 @@ function unlock_keychain () {
   fi
 }
 
+function install_provisioning_profiles () {
+  for p in $1.development $1.distribution ; do
+    install_provisioning_profile $p
+  done
+}
+
 # install PROFILE to Library/MobileDevice/Provisioning\ Profiles/
 #
 # PROFILE.mobileprovision must be a symbolic link pointing to a
 # file of the form UUID.mobileprovision, where UUID is the provisioning
 # profile's UUID
-function copy_provisioning_profile () {
+function install_provisioning_profile () {
   printf 'Installing %s.mobileprovision\n' $1
   local source=${toplevel}/ci/$1.mobileprovision
   local destination
@@ -42,4 +48,4 @@ function copy_provisioning_profile () {
 }
 
 unlock_keychain ${TRAVIS_XCODE_SCHEME}
-copy_provisioning_profile ${TRAVIS_XCODE_SCHEME}
+install_provisioning_profiles ${TRAVIS_XCODE_SCHEME}
