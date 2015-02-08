@@ -1,1 +1,4 @@
 #include "../Pods/Target Support Files/Pods-PandaTests/Pods-PandaTests.debug.xcconfig"
+
+CODE_SIGN_IDENTITY[sdk=iphonesimulator*] =
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer

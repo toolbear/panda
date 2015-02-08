@@ -2,3 +2,5 @@
 
 BUNDLE_ID = dev.toolbear.panda.ios.debug
 DISPLAY_NAME_DECORATOR = 🔧
+CODE_SIGN_IDENTITY[sdk=iphonesimulator*] =
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer
