@@ -2,3 +2,5 @@
 
 BUNDLE_ID = dev.toolbear.panda.ios.adhoc
 DISPLAY_NAME_DECORATOR = 🐣
+PROVISIONING_PROFILE[sdk=iphonesimulator*] =
+PROVISIONING_PROFILE[sdk=iphoneos*] = cf51cdfb-31e8-477a-a5e1-867b30fac492
