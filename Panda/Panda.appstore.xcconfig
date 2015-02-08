@@ -3,3 +3,5 @@
 BUNDLE_ID = dev.toolbear.panda.ios
 PROVISIONING_PROFILE[sdk=iphonesimulator*] =
 PROVISIONING_PROFILE[sdk=iphoneos*] = 7a225ff2-2133-442f-9ecb-ff3a0a8fdd4f
+CODE_SIGN_IDENTITY[sdk=iphonesimulator*] =
+CODE_SIGN_IDENTITY[sdk=iphoneos*] = iPhone Developer: Tim Taylor (NL7R29XSLH)
