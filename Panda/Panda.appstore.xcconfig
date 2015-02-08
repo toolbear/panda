@@ -1,3 +1,5 @@
 #include "../Pods/Target Support Files/Pods/Pods.appstore.xcconfig"
 
 BUNDLE_ID = dev.toolbear.panda.ios
+PROVISIONING_PROFILE[sdk=iphonesimulator*] =
+PROVISIONING_PROFILE[sdk=iphoneos*] = 7a225ff2-2133-442f-9ecb-ff3a0a8fdd4f
