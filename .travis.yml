@@ -1,4 +1,17 @@
 language: objective-c
 xcode_workspace: Panda.xcworkspace
 xcode_scheme: Panda-AdHoc
+xcode_sdk:
+  - iphonesimulator8.1
+  - iphoneos8.1
 before_install: ./scripts/travis/install-keychain-and-mobileprovision
+script: xctool -workspace ${TRAVIS_XCODE_WORKSPACE} -scheme ${TRAVIS_XCODE_SCHEME} -sdk ${TRAVIS_XCODE_SDK} ${ACTION}
+env:
+  - ACTION="build test"
+  - ACTION=archive
+matrix:
+  exclude:
+    - xcode_sdk: iphonesimulator8.1
+      env: ACTION=archive
+    - xcode_sdk: iphoneos8.1
+      env: ACTION="build test"
